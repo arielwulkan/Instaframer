@@ -60,4 +60,4 @@ gem 'haml'
 
 gem 'paperclip', '~> 4.2'
 
-gem 'simple_form'
+gem 'simple_form' 
