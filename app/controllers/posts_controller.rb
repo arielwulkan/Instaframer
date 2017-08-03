@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-
+    @posts = Post.all
   end
 
   def new
@@ -9,8 +9,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post=post.create(post_params)
-    redirect_to post_path
+    @post=Post.create(post_params)
+    redirect_to posts_path
   end
 
 
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:image, :caption)
+    params.require(:post).permit(:image, :caption) #, :image_file_name)
   end
 
 

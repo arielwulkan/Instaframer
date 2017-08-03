@@ -1,1 +1,5 @@
-%h1 Hello
+%h1 PHOTOGRAM do ariel
+
+-@posts.each do |post|
+  =image_tag post.image.url(:medium)
+  =post.caption
